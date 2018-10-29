@@ -38,4 +38,8 @@ replace it with:
 "rel="stylesheet" href="{{ url_for('static', filename='...') }}"
 ```
 
-If all of your files are in the correct place, this should run your website with
+If all of your files are in the correct place, this should run your website with the new template.
+
+All you'll have to do now is edit the new index.html file with your own information.
+
+If you're feeling ambitious, you can also copy the html from index into the other pages that we made in this demo. You'll also need to add links that connect all of the pages. If you need any help with this, feel free to ask any of the organizers.
