@@ -65,7 +65,14 @@ To make your Flask website have HTML and CSS decoration, we'll do the following:
     * For example, `{{ url_for('index') }}` would link someone to the `index()` function in your app.py
 
 ## 3. Taking Input and Output: Zalgo Text Generator
-Over the course of this tutorial so far, we haven't learned
+Over the course of this tutorial so far, we haven't learned to do anything you couldn't do with raw HTML. Let's change that.
+Let's try to take user input and do some cool Python stuff to it, and return it to the user.
+1. To the top of your app.py file, add this to your import: `request`
+1. Next in the `app.route()` decorator, add the argument `methods=['POST']`
+1. Now, we can access data passed in through HTML forms. See the example for specifiecs on how to do this. 
+1. To send a piece of information back to the user:
+    1. Add the following tag to your HTML: `{{ <variable name> }}`
+    1. Add the folowing argument to your `render_template()`: `<variable name>=<variable>`
 
 ## 4. Converting HTML5UP Templates Into Flask-Ready Format
 If you want to make your new website look a bit more exciting, you can always grab a template from html5up: https://html5up.net/.
