@@ -11,12 +11,44 @@ Once Python is installed, open the command prompt and run 'pip install Flask'.
 You should be good to go!
 
 ## 1. Raw Basics
-Import Flask from flask -- this will let you run Flask!
+1. Import Flask from flask -- this will let you run Flask!
 
-Then, use function decorators to tell flask how to route your page.
+1. Create an instance of a Flask app
+    ```python
+    app = Flask(__name__)
+    ```
+    Note: The `__name__` part is required.
 
-What your function returns 
+1. Then, use function decorators to tell Flask how to route your page.
+    For example:
+    ```python
+    @app.route('/')
+    def index():
+        ...
+    ```
+    This function will define what happens when a client goes to "yoururl.com/"
+    
+    ```python
+    @app.route('/about')
+    def about():
+        ...
+    ```
+    This function will define what happens when a client goes to "yoururl.com/about"
 
+1. Now, let's make these functions do something!
+    What a app.route()-decorated function returns is the HTML that gets served to clients requesting your page!
+    So, if we return "Hello, world!" from a given method, that is what will be seen by the users navigating to that method's url.
+
+1. Enable the app to run.
+    We'll add the following code to the bottom of our file:
+    ```python
+    if __name__ == "__main__":
+      app.run(debug=True)
+    ```
+    Two things to note:
+    1. The `if __name__ == "__main__"` chunk is a built-in way of running a kind of 'main' method
+    2. `debug=True` just makes sure that messages about what's happening get printed to the command line you run Flask from.
+    
 ## 2. Making It Pretty
 
 ## 3. Taking Input and Output: Zalgo Text Generator
