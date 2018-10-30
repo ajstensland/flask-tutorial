@@ -50,8 +50,22 @@ You should be good to go!
     2. `debug=True` just makes sure that messages about what's happening get printed to the command line you run Flask from.
     
 ## 2. Making It Pretty
+So, it would be nice to make websites that looked half-decent and had multiple pages, right? Let's do that.
+To make your Flask website have HTML and CSS decoration, we'll do the following:
+1. Create two new folders, `static` and `templates`
+    * Static will hold your images and CSS
+    * HTML will hold your HTML pages
+1. Inside of templates, let's write an `index.html`
+    * Instead of doing paths to assets and stylesheets after `href` tags, use `{{ url_for('static', filename='<asset name here>') }}`
+1. Now, inside of `app.py`, let's do a few things. 
+    1. Add `render_template` after your import statment, right next to `Flask`
+    1. In your `index()` function, instead of returning a message, return `render_template('<filename>')`
+1. Create several other pages like this.
+1. To link to these pages in your HTML, use `{{ url_for('<url-ending>') }}`
+    * For example, `{{ url_for('index') }}` would link someone to the `index()` function in your app.py
 
 ## 3. Taking Input and Output: Zalgo Text Generator
+Over the course of this tutorial so far, we haven't learned
 
 ## 4. Converting HTML5UP Templates Into Flask-Ready Format
 If you want to make your new website look a bit more exciting, you can always grab a template from html5up: https://html5up.net/.
