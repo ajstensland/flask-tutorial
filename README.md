@@ -11,6 +11,11 @@ Once Python is installed, open the command prompt and run 'pip install Flask'.
 You should be good to go!
 
 ## 1. Raw Basics
+Import Flask from flask -- this will let you run Flask!
+
+Then, use function decorators to tell flask how to route your page.
+
+What your function returns 
 
 ## 2. Making It Pretty
 
