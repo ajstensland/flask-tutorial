@@ -1,5 +1,6 @@
 # flask-tutorial
-A tutorial about Flask for HackBU
+A brief tutorial about the Flask framework for HackBU. Contains information about barebones Flask servers, how to add decoration to them, how to take input and send back output, and, finally, how to integrate HTML5UP templates with Flask.
+
 ## Before We Start
 Make sure that you have Python 3 and Flask installed.
 
