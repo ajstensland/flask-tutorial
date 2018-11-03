@@ -69,7 +69,7 @@ Over the course of this tutorial so far, we haven't learned to do anything you c
 Let's try to take user input and do some cool Python stuff to it, and return it to the user.
 1. To the top of your app.py file, add this to your import: `request`
 1. Next in the `app.route()` decorator, add the argument `methods=['POST']`
-1. Now, we can access data passed in through HTML forms. See the example for specifiecs on how to do this. 
+1. Now, we can access data passed in through HTML forms. See the example for specifics on how to do this. 
 1. To send a piece of information back to the user:
     1. Add the following tag to your HTML: `{{ <variable name> }}`
     1. Add the folowing argument to your `render_template()`: `<variable name>=<variable>`
