@@ -26,6 +26,8 @@ Once Python is installed, open the command prompt and run 'pip3 install Flask'.
 
 You should be good to go!
 
+---
+
 ## 1. Raw Basics
 1. Import Flask from flask -- this will let you run Flask!
 
@@ -65,6 +67,8 @@ You should be good to go!
     1. The `if __name__ == "__main__"` chunk is a built-in way of running a kind of 'main' method
     2. `debug=True` just makes sure that messages about what's happening get printed to the command line you run Flask from.
     
+--- 
+
 ## 2. Making It Pretty
 So, it would be nice to make websites that looked half-decent and had multiple pages, right? Let's do that.
 To make your Flask website have HTML and CSS decoration, we'll do the following:
@@ -79,6 +83,8 @@ To make your Flask website have HTML and CSS decoration, we'll do the following:
 1. Create several other pages like this.
 1. To link to these pages in your HTML, use `{{ url_for('<url-ending>') }}`
     * For example, `{{ url_for('index') }}` would link someone to the `index()` function in your app.py
+
+---
 
 ## 3. Taking Input and Output: Zalgo Text Generator
 Over the course of this tutorial so far, we haven't learned to do anything you couldn't do with raw HTML. Let's change that.
