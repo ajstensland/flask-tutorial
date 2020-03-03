@@ -8,12 +8,12 @@ In these sections, you'll learn
 3. How to take user input into your Python programs through Flask
 
 ### Prerequisites
-Before starting this section, you should have an understanding of
+Before starting these sections, you should have an understanding of
 1. [Python Basics](https://github.com/HackBinghamton/PythonWorkshop)
 2. [HTML/CSS](link) (for parts 2 and 3)
 
 ### Introduction
-In this section, we'll discuss hosting web content with Flask servers, how to use custom HTML/CSS with them, and how to take input into your own Python code from users and send output back to them.
+In these sections, we'll discuss hosting web content with Flask servers, how to use custom HTML/CSS with them, and how to take input into your own Python code from users and send output back to them.
 
 ## Before We Start
 Make sure that you have Python 3 and Flask installed.
