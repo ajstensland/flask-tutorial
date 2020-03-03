@@ -9,8 +9,9 @@ In these sections, you'll learn
 
 ### Prerequisites
 Before starting these sections, you should have an understanding of
-1. [Python Basics](https://github.com/HackBinghamton/PythonWorkshop)
-2. [HTML/CSS](link) (for parts 2 and 3)
+1. Have Python installed (see "Before We Start" below)
+2. [Python Basics](https://github.com/HackBinghamton/PythonWorkshop)
+3. [HTML/CSS]() **FILL LINK** (for parts 2 and 3)
 
 ### Introduction
 In these sections, we'll discuss hosting web content with Flask servers, how to use custom HTML/CSS with them, and how to take input into your own Python code from users and send output back to them.
