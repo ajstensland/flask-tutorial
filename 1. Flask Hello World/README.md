@@ -37,7 +37,35 @@ We will, however, have to discuss some HTTP concepts before diving in.
 
 # What is HTTP?
 
-To be  continued...
+Hypertext Transfer Protocol (HTTP) is the language of requests and responses that drives the Web. It consists of two main parts: requests by clients (i.e. users) and responses by webservers.
+
+Requests allow users to ask for pages from and send information to their webserver of interest. The two main requests we'll discuss are GET requests and POST requests.
+
+## Requests: GET and POST
+
+GET requests are the way we usually ask a webserver for a webpage. When you navigated to this URL, your browser sent a GET request asking for this page.
+
+POST requests allow users to send data *back* to a webserver. For example, when someone fills out a form or uploads a file, the data is usually sent via POST.
+
+## Responses: 200, 404, 403, 418...
+
+Once the webserver gets a request, it has to let the user know its status with that request. For example, if I asked the webserver for a page that doesn't exist, it has to let me know that the file doesn't exist -- this is a 404 response.
+
+Every response has a different "code", or number, associated with it. Here's a table of some of the most common response codes (as well as one less common one):
+
+| Response Code | Description                                                                   |
+|:-------------:|-------------------------------------------------------------------------------|
+| 200           | "OK." Everything went as expected                                             |
+| 404           | The file you requested was not found                                          |
+| 301           | "Redirect." The site you visited is sending you to a new URL.                 |
+| 500           | "Internal server error" -- a backend error.                                   |
+| 418           | ["I'm a teapot"](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#418) |
+
+Now, we need to discuss how we can programatically receive requests and reply with responses with Flask.
+
+***Fun Exercise:*** If you open up your developer tools (F12, or go into your browser settings) and go to the "Network" menu and browse to a website of your choice, you can see all the requests you sent and responses you received!
+
+***Note:*** While HTTP and HTML may almost look the same, keep in mind that HTML is a way of writing webpages, while HTTP is a way of sending them.
 
 # What is Flask?
 
