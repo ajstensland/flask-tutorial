@@ -86,7 +86,11 @@ from flask import Flask
 app = Flask(__name__)
 ```
 
-These two lines will a) import the Flask class, which handles most of the behavior of the application, and b) creates a globally-accessible instance of the Flask class. (*Note:* Don't worry about the `__name__` bit -- it's a bit of Python heresy).
+These two lines will:
+1. Import the Flask class, which handles most of the behavior of the application
+2. Create a globally-accessible instance of the Flask class. 
+
+(*Note:* Don't worry about the `__name__` bit -- it's a bit of Python heresy).
 
 Now, we're going to tell Flask what to do when a user sends a request for our "home" (i.e. `www.url.com/`) directory. To do this, we're going to need to use some *very* weird Python features you don't normally see:
 
@@ -96,9 +100,9 @@ def home():                           # Line 2
     return "<h1>Hello, world!</h1>"   # Line 3
 ```
 
-What this block of code effectively does is tells our `app` Flask object, "Hey, when a user requests our home directory, run this `home()` function."
+The first line tells our `app` Flask object, "Hey, when a user requests our home directory, run this `home()` function."
 
-When the Flask object eventually runs the `home()` function, treat whatever its return value is like HTML and send it back to the user.
+When the Flask object eventually runs the `home()` function, it treats whatever the return value is like HTML and sends it back to the user in a 200 response.
 
 ## Running Flask
 
