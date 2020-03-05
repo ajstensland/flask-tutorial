@@ -98,11 +98,33 @@ def home():                           # Line 2
 
 What this block of code effectively does is tells our `app` Flask object, "Hey, when a user requests our home directory, run this `home()` function."
 
-The way Flask effectively works is the following three steps:
+When the Flask object eventually runs the `home()` function, treat whatever its return value is like HTML and send it back to the user.
+
+## Running Flask
+
+To test out our new Flask webserver (let's say you named it `webdev.py`), go into a terminal and run `python3 webdev.py`.
+
+You should see a message stating:
+
+```
+~ : python3 webdev.py
+ * Serving Flask app "test" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ ...
+```
+You don't have to worry about most of the messages, but the last one is of particular interest. The `127.0.0.1:5000/` is the URL that your new server is being hosted on. To see the results, go to that link! You should see your "Hello, world!" message appear.
+
+## What We've Learned
+
+We can describe the way Flask works in the following steps:
 
 1. Get a request from the user for some file or directory, for example "/index.html"
-1. Run the function with the `@app.route("/index.html")` decorator on it.
-    1. If the function exists, take whatever HTML is returned and send it to the user.
-    1. If the function does not exist, give a 404 response
+1. Run the function with the `@app.route("/index.html")` decorator on it
+    1. If the function exists, take whatever HTML is returned and send it to the user in a 200 response
+    1. If the function does not exist, send back a 404 response
     
-
+Knowing this, let's move on to the next part to learn how to add more pages to our website!
