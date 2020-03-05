@@ -69,5 +69,40 @@ Now, we need to discuss how we can programatically receive requests and reply wi
 
 # What is Flask?
 
-Flask allows someone to easily set up a webserver that fulfills all of the above responsiblities with just a little bit of Python code.
+Flask allows someone to easily set up a webserver with just a little bit of Python code. All that you need to write is:
+
+1. Some boilerplate code to get the server up and running
+2. Functions to handle user requests for different pages
+
+Let's get you started with some of the boilerplate code.
+
+## Boilerplate
+
+In an editor of your choice, let's write the following:
+
+```python3
+from flask import Flask
+
+app = Flask(__name__)
+```
+
+These two lines will a) import the Flask class, which handles most of the behavior of the application, and b) creates a globally-accessible instance of the Flask class. (*Note:* Don't worry about the `__name__` bit -- it's a bit of Python heresy).
+
+Now, we're going to tell Flask what to do when a user sends a request for our "home" (i.e. `www.url.com/`) directory. To do this, we're going to need to use some *very* weird Python features you don't normally see:
+
+```python3
+@app.route("/")                       # Line 1
+def home():                           # Line 2
+    return "<h1>Hello, world!</h1>"   # Line 3
+```
+
+What this block of code effectively does is tells our `app` Flask object, "Hey, when a user requests our home directory, run this `home()` function."
+
+The way Flask effectively works is the following three steps:
+
+1. Get a request from the user for some file or directory, for example "/index.html"
+1. Run the function with the `@app.route("/index.html")` decorator on it.
+    1. If the function exists, take whatever HTML is returned and send it to the user.
+    1. If the function does not exist, give a 404 response
+    
 
